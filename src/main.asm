@@ -2872,12 +2872,12 @@ DrawHUD ENDP
 comment @
 the function responsible for restoring the correct background tile at any location the 
 player or an enemy just moved from. Every time Mario moves, jumps, or an enemy walks, 
-their previous position must be “cleaned” and redrawn, otherwise the screen would stay 
+their previous position must be Â“cleanedÂ” and redrawn, otherwise the screen would stay 
 overwritten with their character. This procedure takes the current coordinates (xPos, yPos), 
 checks which level and section the player is in, and determines what type of tile originally existed 
-at that location—such as ground, platforms, pipes, question blocks, pits, lava, bridges, or 
+at that locationÂ—such as ground, platforms, pipes, question blocks, pits, lava, bridges, or 
 empty background. Based on this, it redraws the correct symbol and color for that exact tile. In simple words
-, this function is the map-restoration engine of the game, ensuring that the world’s graphics 
+, this function is the map-restoration engine of the game, ensuring that the worldÂ’s graphics 
 stay accurate and consistent even as characters move across the screen.
 @
 
@@ -5384,7 +5384,7 @@ checkFlagPosition:
     cmp eax, -2
     jl notAtFlag
     
-    ; we’re close enough to the flag
+    ; weÂ’re close enough to the flag
     mov levelComplete, 1
     
     ; bonus score based on height on pole
@@ -7229,7 +7229,7 @@ ShowWelcomeScreen PROC
     call SetTextColor
     
     ; Fill entire screen with spaces in that color
-    mov ecx, 2000  ; 80×25 = 2000 characters (standard console size)
+    mov ecx, 2000  ; 80Ã—25 = 2000 characters (standard console size)
     mov al, ' '    ; Space character
 FillLoop:
     call WriteChar ; Write a space with current color
@@ -7310,7 +7310,7 @@ ShowMenu PROC
     call SetTextColor
     
     ; Fill entire screen with spaces in that color
-    mov ecx, 2000  ; 80×25 = 2000 characters (standard console size)
+    mov ecx, 2000  ; 80Ã—25 = 2000 characters (standard console size)
     mov al, ' '    ; Space character
 FillLoop:
     call WriteChar ; Write a space with current color
